@@ -1,13 +1,14 @@
-programa solidity  ^ 0.4.0;
+pragma solidity  ^ 0.4.0;
 
 contract SimpleStorage{
     uint storedData;
 
-    function set (uint x){
-       storedData = x;
+    function set(uint x) public {
+        storedData = x;
     }
 
-    function get() constant returns (uint retVal){
+    function get() view returns (uint){
         return storedData;
     }
+
 }
