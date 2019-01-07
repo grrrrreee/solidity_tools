@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-contract voting {
+contract voting_making {
     
     
     struct voter {
@@ -45,4 +45,28 @@ contract voting {
         p_index ++ ; 
     }
 
+}
+
+pragma solidity ^0.5.0;
+
+contract voting is voting_making {
+    
+    //아니 근데 view 함수가 뭐야?
+    function send_voting(address v_address) public view {
+        v_address = msg.sender;
+    }
+    
+    //아니 근데 왜 pure 로 하라고 하는거야?
+    //한참은 더 발전 시켜야 함
+    function counting(bool decision, uint agree_count , uint dagree_count) public pure returns(uint, uint){
+        if (decision == true) {
+            agree_count ++;
+        }
+        else {
+            dagree_count ++;
+        }
+        
+        return(agree_count , dagree_count);
+    }
+    
 }
