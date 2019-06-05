@@ -6,4 +6,8 @@ contract name {
     
     }
 
+    function _function () public {
+        
+    }
+
 }
