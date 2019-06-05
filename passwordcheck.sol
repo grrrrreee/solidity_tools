@@ -20,4 +20,3 @@ contract Registration {
     function addmember(uint _index, address _address, string memory _name, uint _password) public {
         
     }
-}
