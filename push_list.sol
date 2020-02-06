@@ -13,7 +13,8 @@ contract _people {
     }
     
     // 구조의 동적배열 생성
-    Person[] people;
+    // 동적 배열 추가설명 필요
+    Person[] people; 
     
     // 새 구조 생성해서 배열에 넣기
     function createpeople(uint age, string name) public returns (uint){
